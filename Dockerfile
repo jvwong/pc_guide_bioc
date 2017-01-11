@@ -3,7 +3,7 @@ FROM jvwong/pc_guide_ocpu
 MAINTAINER Pathway Commons <https://groups.google.com/forum/#!forum/pathway-commons-help/>
 
 # Install the required R/Bioconductor packages
-RUN R -e 'install.packages(c("devtools", "opencpu"), repos="http://cran.us.r-project.org")'
+RUN R -e 'install.packages(c("devtools"), repos="http://cran.us.r-project.org")'
 RUN R -e 'source("https://bioconductor.org/biocLite.R"); \
           biocLite(c("TCGAbiolinks", \
                      "SummarizedExperiment", \
